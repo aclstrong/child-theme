@@ -99,16 +99,14 @@ function aclstrong_ga_code() {
 	<?php
 }
 
-function aclstrong_search_filter( $query ) {
-	// If this is the admin side we do no filtering
-	if ( is_admin() ) {
-		return $query;
-	}
-
-	if ( $query->is_search ) {
-		$query->set( 'post_type', [ 'post', 'page' ] );
-	}
-	return $query;
-}
-
-//add_filter( 'pre_get_posts', 'aclstrong_search_filter' );
+//if ( ! is_admin() ) {
+//	function aclstrong_search_filter( $query ) {
+//
+//		if ( $query->is_search ) {
+//			$query->set( 'post_type', [ 'post', 'page' ] );
+//		}
+//		return $query;
+//	}
+//
+//	add_filter( 'pre_get_posts', 'aclstrong_search_filter' );
+//}
