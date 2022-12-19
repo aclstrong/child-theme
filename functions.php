@@ -111,4 +111,4 @@ function aclstrong_search_filter( $query ) {
 	return $query;
 }
 
-add_filter( 'pre_get_posts', 'aclstrong_search_filter' );
+//add_filter( 'pre_get_posts', 'aclstrong_search_filter' );
